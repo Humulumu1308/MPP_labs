@@ -4,11 +4,12 @@ RUN apt-get update && \
     apt-get install -y \
     build-essential \
     cmake \
+	git \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-COPY . .
+RUN git clone https://github.com/Humulumu1308/MPP_lab0 .
 
 WORKDIR /app/build
 
